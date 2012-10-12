@@ -1,0 +1,16 @@
+program prjYugi;
+
+uses
+  Forms,
+  UCadastroCarta in 'UCadastroCarta.pas' {Form1},
+  UDataBase in 'UDataBase.pas' {DTM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDTM, DTM);
+  Application.Run;
+end.

@@ -1,0 +1,229 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'frmCadastroCarta'
+  ClientHeight = 453
+  ClientWidth = 463
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxDBImage1: TcxDBImage
+    Left = 280
+    Top = 34
+    TabOrder = 0
+    Height = 201
+    Width = 140
+  end
+  object edtNome: TcxDBTextEdit
+    Left = 24
+    Top = 34
+    DataBinding.DataField = 'nome'
+    DataBinding.DataSource = dsCard
+    TabOrder = 1
+    Width = 225
+  end
+  object cxLabel1: TcxLabel
+    Left = 24
+    Top = 16
+    Caption = 'Nome'
+  end
+  object edtCodigo: TcxDBTextEdit
+    Left = 24
+    Top = 79
+    DataBinding.DataField = 'codigo'
+    DataBinding.DataSource = dsCard
+    TabOrder = 3
+    Width = 225
+  end
+  object cxLabel2: TcxLabel
+    Left = 24
+    Top = 61
+    Caption = 'C'#243'digo'
+  end
+  object cxLabel3: TcxLabel
+    Left = 24
+    Top = 104
+    Caption = 'Categoria'
+  end
+  object edtNivel: TcxDBTextEdit
+    Left = 24
+    Top = 170
+    DataBinding.DataField = 'nivel'
+    DataBinding.DataSource = dsCard
+    TabOrder = 6
+    Width = 49
+  end
+  object cxLabel4: TcxLabel
+    Left = 24
+    Top = 152
+    Caption = 'N'#237'vel'
+  end
+  object edtTipo: TcxDBTextEdit
+    Left = 85
+    Top = 170
+    DataBinding.DataField = 'tipo'
+    DataBinding.DataSource = dsCard
+    TabOrder = 8
+    Width = 124
+  end
+  object cxLabel5: TcxLabel
+    Left = 85
+    Top = 152
+    Caption = 'Tipo'
+  end
+  object cmbCategoria: TcxDBComboBox
+    Left = 24
+    Top = 125
+    DataBinding.DataField = 'categoria'
+    DataBinding.DataSource = dsCard
+    Properties.Items.Strings = (
+      'Monster'
+      'Spell'
+      'Trap')
+    Properties.OnChange = cmbCategoriaPropertiesChange
+    TabOrder = 10
+    Width = 225
+  end
+  object edtATK: TcxDBTextEdit
+    Left = 24
+    Top = 255
+    DataBinding.DataField = 'ataque'
+    DataBinding.DataSource = dsCard
+    TabOrder = 11
+    Width = 92
+  end
+  object cxLabel6: TcxLabel
+    Left = 24
+    Top = 239
+    Caption = 'ATK'
+  end
+  object edtDEF: TcxDBTextEdit
+    Left = 125
+    Top = 255
+    DataBinding.DataField = 'defesa'
+    DataBinding.DataSource = dsCard
+    TabOrder = 13
+    Width = 92
+  end
+  object cxLabel7: TcxLabel
+    Left = 24
+    Top = 197
+    Caption = 'Atributo'
+  end
+  object cmbAtributo: TcxDBComboBox
+    Left = 24
+    Top = 214
+    DataBinding.DataField = 'atributo'
+    DataBinding.DataSource = dsCard
+    Properties.Items.Strings = (
+      'Dark'
+      'Light'
+      'Earth'
+      'Wind'
+      'Fire'
+      'Water')
+    TabOrder = 15
+    Width = 121
+  end
+  object cxLabel8: TcxLabel
+    Left = 125
+    Top = 237
+    Caption = 'DEF'
+  end
+  object btnIncluir: TcxButton
+    Left = 24
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 17
+    OnClick = btnIncluirClick
+  end
+  object btnSalvar: TcxButton
+    Left = 105
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 18
+    OnClick = btnSalvarClick
+  end
+  object btnCancelar: TcxButton
+    Left = 186
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Cancelar'
+    TabOrder = 19
+    OnClick = btnCancelarClick
+  end
+  object btnRemover: TcxButton
+    Left = 267
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Remover'
+    TabOrder = 20
+    OnClick = btnRemoverClick
+  end
+  object qryCard: TADOQuery
+    Connection = DTM.Connection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from cards')
+    Left = 416
+    Top = 304
+    object qryCardid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object qryCardnome: TStringField
+      FieldName = 'nome'
+      Size = 60
+    end
+    object qryCardcodigo: TStringField
+      FieldName = 'codigo'
+      Size = 10
+    end
+    object qryCarddescricao: TMemoField
+      FieldName = 'descricao'
+      BlobType = ftMemo
+    end
+    object qryCardnivel: TIntegerField
+      FieldName = 'nivel'
+    end
+    object qryCardtipo: TStringField
+      FieldName = 'tipo'
+      Size = 45
+    end
+    object qryCardatributo: TStringField
+      FieldName = 'atributo'
+      Size = 10
+    end
+    object qryCardataque: TIntegerField
+      FieldName = 'ataque'
+    end
+    object qryCarddefesa: TIntegerField
+      FieldName = 'defesa'
+    end
+    object qryCardcategoria: TStringField
+      FieldName = 'categoria'
+      Size = 10
+    end
+    object qryCardimage: TBlobField
+      FieldName = 'image'
+    end
+  end
+  object dsCard: TDataSource
+    DataSet = qryCard
+    Left = 416
+    Top = 360
+  end
+end

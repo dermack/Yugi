@@ -1,0 +1,102 @@
+unit UDeckEdit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters,
+  cxContainer, cxEdit, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinCaramel,
+  dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinFoggy, dxSkinGlassOceans,
+  dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
+  dxSkinMcSkin, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
+  dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSilver, dxSkinSpringTime,
+  dxSkinStardust, dxSkinSummer2008, dxSkinsDefaultPainters, dxSkinValentine,
+  dxSkinXmas2008Blue, DB, ADODB, cxTextEdit, cxMemo, cxDBEdit, cxImage,
+  cxGroupBox, cxStyles, dxSkinscxPCPainter, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxDBData, Menus, StdCtrls, cxButtons, cxLabel,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGridLevel,
+  cxClasses, cxGridCustomView, cxGrid;
+
+type
+  TForm1 = class(TForm)
+    grpCard: TcxGroupBox;
+    imgCard: TcxDBImage;
+    memoDesc: TcxDBMemo;
+    qryCards: TADOQuery;
+    qryCardsid: TAutoIncField;
+    qryCardsnome: TStringField;
+    qryCardscodigo: TStringField;
+    qryCardsdescricao: TMemoField;
+    qryCardsnivel: TIntegerField;
+    qryCardstipo: TStringField;
+    qryCardsatributo: TStringField;
+    qryCardsataque: TIntegerField;
+    qryCardsdefesa: TIntegerField;
+    qryCardscategoria: TStringField;
+    qryCardsimage: TBlobField;
+    dsCards: TDataSource;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    cxGrid1DBTableView1nome: TcxGridDBColumn;
+    cxLabel1: TcxLabel;
+    cxLabel2: TcxLabel;
+    cxGrid2: TcxGrid;
+    cxGridDBTableView1: TcxGridDBTableView;
+    cxGridLevel1: TcxGridLevel;
+    btnAdicionar: TcxButton;
+    btnRemover: TcxButton;
+    qryDeck: TADOQuery;
+    dsDeck: TDataSource;
+    qryDeckid: TAutoIncField;
+    qryDecknome: TStringField;
+    qryDeckcodigo: TStringField;
+    qryDeckdescricao: TMemoField;
+    qryDecknivel: TIntegerField;
+    qryDecktipo: TStringField;
+    qryDeckatributo: TStringField;
+    qryDeckataque: TIntegerField;
+    qryDeckdefesa: TIntegerField;
+    qryDeckcategoria: TStringField;
+    qryDeckimage: TBlobField;
+    qryDeckqtd: TIntegerField;
+    cxGridDBTableView1nome: TcxGridDBColumn;
+    cxGridDBTableView1qtd: TcxGridDBColumn;
+    procedure cxGrid1DBTableView1CellClick(Sender: TcxCustomGridTableView;
+      ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+      AShift: TShiftState; var AHandled: Boolean);
+    procedure cxGridDBTableView1CellClick(Sender: TcxCustomGridTableView;
+      ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+      AShift: TShiftState; var AHandled: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses UDataBase;
+
+{$R *.dfm}
+
+procedure TForm1.cxGrid1DBTableView1CellClick(Sender: TcxCustomGridTableView;
+  ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+  AShift: TShiftState; var AHandled: Boolean);
+begin
+   imgCard.DataBinding.DataSource := qryCards;
+end;
+
+procedure TForm1.cxGridDBTableView1CellClick(Sender: TcxCustomGridTableView;
+  ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+  AShift: TShiftState; var AHandled: Boolean);
+begin
+   imgCard.DataBinding.DataSource := qryDeck;
+end;
+
+end.

@@ -1,0 +1,11 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 284
+  Width = 371
+  object Connection: TADOConnection
+    ConnectionString = 'Provider=MSDASQL.1;Persist Security Info=False;Data Source=yugi'
+    Provider = 'MSDASQL.1'
+    Left = 72
+    Top = 32
+  end
+end

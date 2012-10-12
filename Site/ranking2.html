@@ -1,0 +1,21 @@
+<?php
+    $con = mysql_connect('localhost', 'root', 'root') or die('Não foi possível conectar');
+
+	mysql_select_db("yugi", $con);
+    $result = mysql_query('SELECT id, username, pontos FROM user ODER BY pontos DESC');
+    echo "<table border='0'>
+    <tr>
+    <th>Código</th>
+    <th>User</th>
+	<th>Pontos</th>
+    </tr>";
+	while($row = mysql_fetch_array($result)) {
+		echo "<tr>";
+		echo "<td>" . $row['id'] . "</td>";
+		echo "<td>" . $row['username'] . "</td>";
+		echo "<td>" . $row['pontos'] . "</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
+	mysql_close($con);
+?>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/07/25 13:45:56.453.pas,C:\Documents and Settings\Software\Meus documentos\RAD Studio\Projects\Unit2.pas=E:\yugi\delphi\UDataBase.pas</Transaction>
+    <Transaction>2012/07/25 13:45:56.453.dfm,C:\Documents and Settings\Software\Meus documentos\RAD Studio\Projects\Unit2.dfm=E:\yugi\delphi\UDataBase.dfm</Transaction>
+    <Transaction>2012/07/25 13:46:12.265.pas,C:\Documents and Settings\Software\Meus documentos\RAD Studio\Projects\Unit1.pas=E:\yugi\delphi\UCadastroCarta.pas</Transaction>
+    <Transaction>2012/07/25 13:46:12.265.dfm,C:\Documents and Settings\Software\Meus documentos\RAD Studio\Projects\Unit1.dfm=E:\yugi\delphi\UCadastroCarta.dfm</Transaction>
+    <Transaction>2012/07/25 13:46:21.968.dproj,C:\Documents and Settings\Software\Meus documentos\RAD Studio\Projects\Project1.dproj=E:\yugi\delphi\prjYugi.dproj</Transaction>
+    <Transaction>2012/07/25 16:21:03.546.pas,E:\yugi\delphi\Unit1.pas=E:\yugi\delphi\UDeckEdit.pas</Transaction>
+    <Transaction>2012/07/25 16:21:03.562.dfm,E:\yugi\delphi\Unit1.dfm=E:\yugi\delphi\UDeckEdit.dfm</Transaction>
+    <Transaction>2012/07/25 16:50:57.750.pas,E:\yugi\delphi\Unit2.pas=E:\yugi\delphi\UMain.pas</Transaction>
+    <Transaction>2012/07/25 16:50:57.750.dfm,E:\yugi\delphi\Unit2.dfm=E:\yugi\delphi\UMain.dfm</Transaction>
+    <Transaction>2012/07/25 16:53:18.046.pas,E:\yugi\delphi\Unit3.pas=E:\yugi\delphi\ULogin.pas</Transaction>
+    <Transaction>2012/07/25 16:53:18.046.dfm,E:\yugi\delphi\Unit3.dfm=E:\yugi\delphi\ULogin.dfm</Transaction>
+    <Transaction>2012/10/10 00:54:25.706.pas,C:\Users\Ronie\Desktop\yugi\delphi\Unit1.pas=C:\Users\Ronie\Desktop\yugi\delphi\UJogar.pas</Transaction>
+    <Transaction>2012/10/10 00:54:25.706.dfm,C:\Users\Ronie\Desktop\yugi\delphi\Unit1.dfm=C:\Users\Ronie\Desktop\yugi\delphi\UJogar.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

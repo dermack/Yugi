@@ -1,0 +1,62 @@
+object frmLogin: TfrmLogin
+  Left = 0
+  Top = 0
+  Caption = 'frmLogin'
+  ClientHeight = 162
+  ClientWidth = 331
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object edtUser: TcxTextEdit
+    Left = 16
+    Top = 27
+    TabOrder = 0
+    Width = 289
+  end
+  object cxLabel1: TcxLabel
+    Left = 16
+    Top = 9
+    Caption = 'Usu'#225'rio'
+  end
+  object edtPass: TcxTextEdit
+    Left = 16
+    Top = 67
+    Properties.PasswordChar = '*'
+    TabOrder = 2
+    Width = 289
+  end
+  object cxLabel2: TcxLabel
+    Left = 16
+    Top = 49
+    Caption = 'Senha'
+  end
+  object btnEntrar: TcxButton
+    Left = 88
+    Top = 109
+    Width = 75
+    Height = 25
+    Caption = 'Entrar'
+    TabOrder = 4
+    OnClick = btnEntrarClick
+  end
+  object btnSair: TcxButton
+    Left = 169
+    Top = 109
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 5
+  end
+  object qryLogin: TADOQuery
+    Connection = DTM.Connection
+    Parameters = <>
+    Left = 288
+    Top = 104
+  end
+end

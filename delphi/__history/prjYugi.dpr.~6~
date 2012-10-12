@@ -1,0 +1,22 @@
+program prjYugi;
+
+uses
+  Forms,
+  UCadastroCarta in 'UCadastroCarta.pas' {frmCadastroCarta},
+  UDataBase in 'UDataBase.pas' {DTM: TDataModule},
+  UDeckEdit in 'UDeckEdit.pas' {Form1},
+  UMain in 'UMain.pas' {Form2},
+  ULogin in 'ULogin.pas' {Form3};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDTM, DTM);
+  Application.CreateForm(TfrmCadastroCarta, frmCadastroCarta);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.Run;
+end.

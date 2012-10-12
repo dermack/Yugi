@@ -1,0 +1,56 @@
+unit ULogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, ADODB, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinBlack,
+  dxSkinBlue, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinFoggy, dxSkinGlassOceans, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMoneyTwins,
+  dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
+  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black,
+  dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinPumpkin, dxSkinSeven,
+  dxSkinSharp, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinsDefaultPainters, dxSkinValentine, dxSkinXmas2008Blue, cxLabel,
+  cxTextEdit, Menus, StdCtrls, cxButtons;
+
+type
+  TfrmLogin = class(TForm)
+    qryLogin: TADOQuery;
+    edtUser: TcxTextEdit;
+    cxLabel1: TcxLabel;
+    edtPass: TcxTextEdit;
+    cxLabel2: TcxLabel;
+    btnEntrar: TcxButton;
+    btnSair: TcxButton;
+    procedure btnEntrarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+uses UDataBase;
+
+{$R *.dfm}
+
+procedure TfrmLogin.btnEntrarClick(Sender: TObject);
+begin
+   qryLogin.SQL.Clear;
+   qryLogin.SQL.Add('Selecet id from user where username = :user and passwd = :pass');
+   qryLogin.Parameters.ParamByName('user').Value := edtUser.Text;
+   qryLogin.Parameters.ParamByName('pass').Value := edtPass.Text;
+   qryLogin.Active := True;
+
+   if qryLogin.Eof then
+      ShowMessage('Usuário ou Senha inválidos!');
+end;
+
+end.

@@ -1,0 +1,48 @@
+-- r g b
+(181, 182, 205) infoBar
+(110, 112, 142) border
+(220, 221, 231) textzone
+
+-- tamanho das cartas res 1000 /740
+
+mão - 110 x 159
+field - 80 x 116/117
+infobar - 180 x 265
+
+tamanho do campo descrição - 170 x 360
+
+-- tamanho das cartas res 800 / 600
+
+
+field - 65 x ???
+infobar - 140 x ???
+
+tamanho do campo descrição - 135 x 285
+infobar - 170 x 600
+
+espaço - 25px
+
+campo 581 x 220
+
+
+
+espaço carta - 82 x 110
+
+status - 300 x 40 (espaço meio - 30)
+
+phases
+   espaço inicial - 65
+   espaço entre - 20
+
+mão 
+   tamanho carta - 90 x ???
+   espaço inicial - 25 x 505
+
+
+-- Fontes
+
+infobar desc. SansBold Tam 16/14 - color black
+infobar title SansBold tam 16/18 - color textZone
+nome player - sans tam 18 - color black
+LP - SansBold tam 26 - color Black
+Phases SansBold tam 26 - color black (active phase - color red)
